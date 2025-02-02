@@ -1,44 +1,47 @@
-to run 
-uvicorn main:app 
-
-endpoint examples
+command to run script
+`uvicorn main:app `
 
 
----- FOR POINTS -----
 
-get : /points # returns all points
+###  POINTS 
 
-get : /points/<id> # return point with id = 1
+get : `/points` # returns all points
 
+get : `/points/<id>` # return point with id = 1
+```
  {
     "name": "Point A",
     "latitude": 40.7128,
     "longitude": -74.0060
 }
+```
 
-
-post : /points
+post : `/points`
+```
 body : {
     "name": "Point A",
     "latitude": 40.7128,
     "longitude": -74.0060,
     "description": "random place"
 }
-
-put : /points/<id>
+```
+put : `/points/<id>`
+```
 body : {
     "name": "Point A new",
     "latitude": 40.7128,
     "longitude": -74.0060,
     "description": "random place 2"
 }
+```
 
----- FOR POLYGONS -----
-get : /polygons # returns all polygons 
+###  POLYGONS
+get : `/polygons` # returns all polygons 
 
-get : /polygons/<id>  # return polygon with id = 1
+get : `/polygons/<id>`  # return polygon with id = 1
 
-post : /polygons
+post : `/polygons`
+```
 body : {
     "name": "Polygon A",
     "coordinates": [
@@ -51,9 +54,10 @@ body : {
         "population" : 321
     }
 }
+```
 
-
-put : /polygons/<id>
+put : `/polygons/<id>`
+```
 body : {
     "name": "Polygon A new",
     "coordinates": [
@@ -66,4 +70,5 @@ body : {
         "population" : 321
     }
 }
+```
 
